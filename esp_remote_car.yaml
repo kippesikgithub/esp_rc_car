@@ -2,6 +2,7 @@ esphome:
   name: esp-remote-car
   friendly_name: esp-remote-car
 
+#change to esp board you use
 esp32:
   board: esp32-s2-saola-1
   framework:
