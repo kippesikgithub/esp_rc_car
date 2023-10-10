@@ -2,7 +2,7 @@
 Wifi controlled car based on ESPHome
 
 ## Home Assistant Card
-![Screenshot_20231009-213708](https://github.com/kippesikgithub/esp_rc_car/assets/100353268/7f9361ee-8787-4834-b6aa-74fc7c666b97)
+![Screenshot_20231009-213708](https://github.com/kippesikgithub/esp_rc_car/assets/100353268/69cdad8b-679a-431a-acdd-01560d5cd4de)
 
 
 ## Esp Remote Car
