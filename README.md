@@ -1,4 +1,4 @@
-# esp_rc_car
+# Wifi controlled platform/car based on ESPHome
 Wifi controlled car based on ESPHome
 
 ## Home Assistant Card
