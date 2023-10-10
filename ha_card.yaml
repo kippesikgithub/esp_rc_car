@@ -9,34 +9,22 @@ cards:
             icon: >-
               {% if states('sensor.esp_remote_car_rc_car_wifi_signal_percent') |
               float > 11 %}
-
               mdi:wifi
-
               {% elif states('sensor.esp_remote_car_rc_car_wifi_signal_percent')
               | float < 11 %}
-
               mdi:wifi-cancel
-
               {% else %}
-
               mdi:wifi
-
               {% endif %}
             icon_color: >-
               {% if states('sensor.esp_remote_car_rc_car_wifi_signal_percent') |
               float > 10 %}
-
               green
-
               {% elif states('sensor.esp_remote_car_rc_car_wifi_signal_percent')
               | float < 10 %}
-
               red
-
               {% else %}
-
               disabled
-
               {% endif %}
             content: '{{ states("sensor.esp_remote_car_rc_car_wifi_signal_percent") }} %'
             entity: sensor.esp_remote_car_rc_car_wifi_signal_percent
@@ -47,18 +35,12 @@ cards:
             icon_color: >-
               {% if states('sensor.esp_remote_car_rc_car_wifi_signal_db') |
               float < -10 %}
-
               green
-
               {% elif states('sensor.esp_remote_car_rc_car_wifi_signal_db') |
               float > -10 %}
-
               red
-
               {% else %}
-
               disabled
-
               {% endif %}
             content: '{{ states("sensor.esp_remote_car_rc_car_wifi_signal_db") }} db'
             entity: sensor.esp_remote_car_rc_car_wifi_signal_db
