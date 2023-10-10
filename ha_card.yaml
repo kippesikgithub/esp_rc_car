@@ -1,0 +1,190 @@
+type: vertical-stack
+cards:
+  - type: custom:vertical-stack-in-card
+    horizontal: true
+    cards:
+      - type: custom:mushroom-chips-card
+        chips:
+          - type: template
+            icon: >-
+              {% if states('sensor.esp_remote_car_rc_car_wifi_signal_percent') |
+              float > 11 %}
+
+              mdi:wifi
+
+              {% elif states('sensor.esp_remote_car_rc_car_wifi_signal_percent')
+              | float < 11 %}
+
+              mdi:wifi-cancel
+
+              {% else %}
+
+              mdi:wifi
+
+              {% endif %}
+            icon_color: >-
+              {% if states('sensor.esp_remote_car_rc_car_wifi_signal_percent') |
+              float > 10 %}
+
+              green
+
+              {% elif states('sensor.esp_remote_car_rc_car_wifi_signal_percent')
+              | float < 10 %}
+
+              red
+
+              {% else %}
+
+              disabled
+
+              {% endif %}
+            content: '{{ states("sensor.esp_remote_car_rc_car_wifi_signal_percent") }} %'
+            entity: sensor.esp_remote_car_rc_car_wifi_signal_percent
+            tap_action:
+              action: more-info
+          - type: template
+            icon: mdi:wifi-settings
+            icon_color: >-
+              {% if states('sensor.esp_remote_car_rc_car_wifi_signal_db') |
+              float < -10 %}
+
+              green
+
+              {% elif states('sensor.esp_remote_car_rc_car_wifi_signal_db') |
+              float > -10 %}
+
+              red
+
+              {% else %}
+
+              disabled
+
+              {% endif %}
+            content: '{{ states("sensor.esp_remote_car_rc_car_wifi_signal_db") }} db'
+            entity: sensor.esp_remote_car_rc_car_wifi_signal_db
+            tap_action:
+              action: more-info
+          - type: template
+            entity: sensor.esp_remote_car_battery_level
+            content: '{{ states("sensor.esp_remote_car_battery_level")|round(1) }} %'
+            icon: |2
+                        {% set bl = states('sensor.esp_remote_car_battery_level') | int %}
+                        {% if bl < 10 %} mdi:battery-outline
+                        {% elif bl < 20 %} mdi:battery-10
+                        {% elif bl < 30 %} mdi:battery-20
+                        {% elif bl < 40 %} mdi:battery-30
+                        {% elif bl < 50 %} mdi:battery-40
+                        {% elif bl < 60 %} mdi:battery-50
+                        {% elif bl < 70 %} mdi:battery-60
+                        {% elif bl < 80 %} mdi:battery-70
+                        {% elif bl < 90 %} mdi:battery-80
+                        {% elif bl < 100 %} mdi:battery-90
+                        {% elif bl == 100 %} mdi:battery
+                        {% else %} mdi:battery-unknown
+                        {% endif %}
+            icon_color: |2-
+                        {% set bl = states('sensor.esp_remote_car_battery_level') | int %}
+                        {% if bl < 10 %} red
+                        {% elif bl < 20 %} red
+                        {% elif bl < 30 %} red
+                        {% elif bl < 40 %} orange
+                        {% elif bl < 50 %} orange
+                        {% elif bl < 60 %} green
+                        {% elif bl < 70 %} green
+                        {% elif bl < 80 %} green
+                        {% elif bl < 90 %} green
+                        {% elif bl < 100 %} green
+                        {% elif bl == 100 %} green
+                        {% else %} grey
+                        {% endif %}
+            tap_action:
+              action: more-info
+          - type: template
+            entity: sensor.esp_remote_car_battery_voltage
+            content: '{{ states("sensor.esp_remote_car_battery_voltage")|round(2) }} V'
+            icon: mdi:battery
+            icon_color: null
+            tap_action:
+              action: more-info
+        alignment: center
+  - type: horizontal-stack
+    cards:
+      - type: custom:mushroom-template-card
+        primary: ''
+        secondary: Voor
+        icon_color: |-
+          {% if is_state('light.esp_remote_car_verlichting_voor', 'on') %}
+            yellow
+          {% endif %}
+        icon: mdi:car-light-high
+        layout: vertical
+        entity: light.esp_remote_car_verlichting_voor
+        tap_action:
+          action: toggle
+      - type: custom:mushroom-template-card
+        primary: ''
+        secondary: Achter
+        icon_color: |-
+          {% if is_state('light.esp_remote_car_verlichting_achter', 'on') %}
+            red
+          {% endif %}
+        icon: mdi:car-light-high
+        layout: vertical
+        entity: light.esp_remote_car_verlichting_achter
+        tap_action:
+          action: toggle
+  - type: horizontal-stack
+    cards:
+      - type: custom:mushroom-template-card
+        primary: ''
+        secondary: Stop
+        icon_color: red
+        icon: mdi:stop
+        layout: vertical
+        entity: input_button.rc_car_stop
+        tap_action:
+          action: toggle
+  - type: horizontal-stack
+    cards:
+      - type: custom:mushroom-template-card
+        primary: >-
+          {{ (states("sensor.esp_remote_car_ultrasonic_voor")|float *100)|round
+          }} cm
+        secondary: Voor
+        icon_color: green
+        icon: mdi:arrow-up-bold
+        layout: vertical
+        entity: input_button.rc_car_forward
+        tap_action:
+          action: toggle
+  - type: horizontal-stack
+    cards:
+      - type: custom:mushroom-template-card
+        primary: ''
+        secondary: Links
+        icon_color: blue
+        icon: mdi:arrow-left-bold
+        layout: vertical
+        entity: input_button.rc_car_left
+        tap_action:
+          action: toggle
+      - type: custom:mushroom-template-card
+        primary: ''
+        secondary: Rechts
+        icon_color: blue
+        icon: mdi:arrow-right-bold
+        layout: vertical
+        entity: input_button.rc_car_right
+        tap_action:
+          action: toggle
+  - type: horizontal-stack
+    cards:
+      - type: custom:mushroom-template-card
+        primary: ''
+        secondary: Achter
+        icon_color: green
+        icon: mdi:arrow-down-bold
+        layout: vertical
+        entity: input_button.rc_car_backward
+        tap_action:
+          action: toggle
