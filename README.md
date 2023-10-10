@@ -1,6 +1,7 @@
 # Wifi controlled platform/car based on ESPHome
-Wifi controlled car based on ESPHome
-
+Wifi controlled car build with ESPHome framework  
+https://esphome.io/index.html
+  
 The objective was to create a platform that is able to move around (autonomous and controlled) our house. The platform should be easy to extend (modulair) by adding sensors other electronics (and off course code).
 
 Needed Components  
