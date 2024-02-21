@@ -10,9 +10,11 @@ Espressif Esp32s2
 L298N motor driver board  
 Stepdown converter 5V 5A  
 3x 18650 Li-ion + holder  
+3S Li-ion BMS  
 SR HC-404 ultrasonic distance sensor  
 2x WS2811 Led strips (front & back)  
 Resistors / Voltage Dividers (100k & 47k)  
+IP Camera (foscam c1)  
 Cables  
 Wago clambs / connector  
 Soldering skills  
