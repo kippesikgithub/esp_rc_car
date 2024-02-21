@@ -8,7 +8,7 @@ Needed Components
 Car frame + motors + wheels kit  
 Espressif Esp32s2  
 L298N motor driver board  
-Stepdown converter 5V 5A  
+2x Stepdown converter 5V 5A  
 3x 18650 Li-ion + holder  
 3S Li-ion BMS  
 SR HC-404 ultrasonic distance sensor  
