@@ -27,9 +27,9 @@ Indoor positioning system based on bluetooth or lidar.
 
 
 ## Esp Remote Car
-![PXL_20231009_192530176 MP](https://github.com/kippesikgithub/esp_rc_car/assets/100353268/de9bd960-f50a-4b5b-a780-d8d157d55007)
-
-![PXL_20231008_192621757 MP](https://github.com/kippesikgithub/esp_rc_car/assets/100353268/134954b6-0dc8-4765-bb1c-5fdb2e4c9cd7)
+![image](https://github.com/kippesikgithub/esp_rc_car/assets/100353268/d429ada4-2f4d-4fd3-a4aa-6e01427cfc02)
+![image](https://github.com/kippesikgithub/esp_rc_car/assets/100353268/9f61bd14-7ef6-4999-8916-518e7c97cc76)
+![image](https://github.com/kippesikgithub/esp_rc_car/assets/100353268/0cca3696-69ae-422a-af2a-f112db1fa0ff)
 
 ## Video version1
 https://youtube.com/shorts/o0GXV8igDKU?si=S0ImKc_o1tNPL9a-
