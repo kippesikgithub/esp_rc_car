@@ -25,7 +25,7 @@ Add charging station.
 Indoor positioning system based on bluetooth or lidar.  
 
 ## Home Assistant Card
-![Screenshot_20231009-213708](https://github.com/kippesikgithub/esp_rc_car/assets/100353268/69cdad8b-679a-431a-acdd-01560d5cd4de)
+![image](https://github.com/kippesikgithub/esp_rc_car/assets/100353268/0357a5d1-9b4d-465a-8c8d-c3d211a210c4)
 
 
 ## Esp Remote Car
